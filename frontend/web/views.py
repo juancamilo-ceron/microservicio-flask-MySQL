@@ -15,14 +15,18 @@ def index():
 def users():
     return render_template('users.html')
 
-@app.route('/products')
-def users():
-    return render_template('products.html')
+
 
 @app.route('/editUser/<string:id>')
 def edit_user(id):
     print("id recibido",id)
     return render_template('editUser.html', id=id)
+
+# Ruta para renderizar el template products.html
+@app.route('/products')
+def products():
+    return render_template('products.html')
+
 
 
 if __name__ == '__main__':
