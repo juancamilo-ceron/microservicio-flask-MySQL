@@ -15,9 +15,7 @@ def index():
 def users():
     return render_template('users.html')
 
-@app.route('/products')
-def users():
-    return render_template('products.html')
+
 
 @app.route('/editUser/<string:id>')
 def edit_user(id):
